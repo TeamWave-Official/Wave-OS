@@ -1,0 +1,54 @@
+﻿<Window
+    x:Class="WaveBash.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Wave Bash">
+
+    <Grid>
+        <!-- Fancy blurred background -->
+        <Grid.Background>
+            <AcrylicBrush
+                TintColor="#0a0f2c"
+                TintOpacity="0.7"
+                FallbackColor="Black"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Terminal Output Box in a rounded card -->
+        <Border Grid.Row="0"
+                Margin="20"
+                CornerRadius="20"
+                Background="#111111AA"
+                Padding="15">
+            <ScrollViewer>
+                <TextBlock x:Name="OutputBox"
+                           FontFamily="Cascadia Code, Consolas, Courier New"
+                           FontSize="15"
+                           TextWrapping="Wrap"
+                           Foreground="#00FFD1"/>
+            </ScrollViewer>
+        </Border>
+
+        <!-- Input row -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,0,20,20">
+            <TextBox x:Name="CommandBox"
+                     Width="600"
+                     PlaceholderText="Wave@OS:~$"
+                     FontFamily="Cascadia Code, Consolas, Courier New"
+                     BorderBrush="#00FFD1"
+                     BorderThickness="2"
+                     CornerRadius="12"/>
+            <Button Content="▶"
+                    FontSize="20"
+                    Margin="10,0,0,0"
+                    CornerRadius="12"
+                    Background="#00FFD1"
+                    Foreground="Black"
+                    Click="RunCommand_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
