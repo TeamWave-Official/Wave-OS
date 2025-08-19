@@ -10,6 +10,7 @@ Key Highlights
     - Developer-Friendly – Supports multiple programming environments like C, C++, Python, and more.
     - Cross-Compatible – Designed to support applications and tools from Windows, Linux, and macOS.
     - Secure & Reliable – Prioritizing your safety with modern security standards.
+    - Introducing Cashew AI (Cashew 1.1)! The future of AI and IT in the universe.
 
 Our Mission
 
